@@ -1,0 +1,40 @@
+
+<?php if ($this->bs_de_def_tl_bool_first == 1): ?>
+	<ul class="timeline">
+<?php endif; ?>	
+	<li>
+		<?php if ($this->bs_de_def_tl_position == "left"): ?>
+			<div class="direction-l">
+		<?php else: ?>	
+	        <div class="direction-r">
+		<?php endif; ?>
+		<div class="flag-wrapper">
+		<?php if ($this->singleSRC): ?>
+			<div class="bs_tl_image flag">
+				<?php $this->insert('picture_default', $this->picture); ?>	
+	        </div> 
+	    <?php endif; ?>
+		</div>
+	    <?php if ($this->bs_de_def_tl_headline): ?>
+	        <h2 class="bs_headline">
+		    	<?php echo $this->bs_de_def_tl_headline ?>
+	        </h2> 
+	    <?php endif; ?>
+	    
+	    <?php if ($this->bs_de_def_tl_sub_headline): ?>
+	        <h3 class="bs_sub_headline">
+		    	<?php echo $this->bs_de_def_tl_sub_headline ?>
+	        </h3> 
+	    <?php endif; ?>      
+        
+        <?php if ($this->bs_de_def_tl_text): ?>
+	        <div class="bs_text">
+		    	<?php echo $this->bs_de_def_tl_text ?>
+	        </div> 
+	    <?php endif; ?>    
+               
+        	</div>
+	</li>
+  <?php if ($this->bs_de_def_tl_bool_last == 1): ?>
+    </ul>
+  <?php endif; ?>
